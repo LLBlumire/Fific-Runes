@@ -1,0 +1,360 @@
+\documentclass[a4paper,DIV=calc]{scrartcl}
+\usepackage{tikz}
+\usepackage{tabu}
+\usepackage{libertine}
+
+\title{Fific Runes}
+\author{Lucille Blumire}
+\date{}
+
+\newcommand{\rM}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,2) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rN}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (1,0) -- (1,2);
+    \draw[very thick,line cap=round,line join=round] (0,1.5) -- (2,0.5);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rNG}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (1.5,1) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (2,2) -- (0.5,1) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rP}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (2,2) -- (1,1.5) -- (0,2) -- (0,0) -- (1,0.5) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rT}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (1,2) -- (1,0);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (1,2) -- (2,1);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rK}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (2,2) -- (0,1) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rB}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,1.5) -- (0,2) -- (0,0) -- (2,0.5) -- (0,1);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rD}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,0) -- (2,2) -- (0,0) -- cycle;
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rG}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,0);
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (2,2);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rF}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,1.5) -- (2,2);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,1.5);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rTH}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,1.5) -- (2,1) -- (0,0.5);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rS}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0) -- (2,2) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rH}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,1.5) -- (2,0.5);
+    \draw[very thick,line cap=round,line join=round] (2,2) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rW}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1.5) -- (0,1);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rDH}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (1,2) -- (1,0) -- (0,0.5) -- (2,1.5);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rZ}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (1,2) -- (1,0);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (1,1) -- (2,2);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rL}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rR}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,1.5) -- (0,1);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rJ}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (1,0) -- (1,2);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (1,1.5) -- (2,1) -- (1,0.5) -- cycle;
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rI}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (1,0) -- (1,2);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rU}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1.5) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rE}[1][{[yscale=0.2,xscale=0.15]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (1,1.5) -- (2,2) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rY}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (2,2) -- (0,2) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rO}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (1,1.5) -- (2,2);
+    \draw[very thick,line cap=round,line join=round] (0,1.5) -- (1,1) -- (2,1.5);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\rA}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,1.5);
+    \draw[very thick,line cap=round,line join=round] (0,1.5) -- (2,1);
+    \end{tikzpicture}%
+    \,%
+}
+
+\newcommand{\xI}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,2);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\xII}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,2);
+    \draw[very thick,line cap=round,line join=round] (0,1.67) -- (2,1.67);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\xIII}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,2);
+    \draw[very thick,line cap=round,line join=round] (0,1.67) -- (2,1.67);
+    \draw[very thick,line cap=round,line join=round] (0,1.33) -- (2,1.33);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\xIV}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (0,0);
+    \draw[very thick,line cap=round,line join=round] (0,2) -- (2,2);
+    \draw[very thick,line cap=round,line join=round] (0,1.67) -- (2,1.67);
+    \draw[very thick,line cap=round,line join=round] (0,1.33) -- (2,1.33);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,1);
+    \end{tikzpicture}%
+    \,%
+}
+\let\xV\rW%
+\newcommand{\xVI}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1.5) -- (0,1);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,1);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\xVII}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1.5) -- (0,1);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,1);
+    \draw[very thick,line cap=round,line join=round] (0,0.67) -- (2,0.67);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\xVIII}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1.5) -- (0,1);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,1);
+    \draw[very thick,line cap=round,line join=round] (0,0.67) -- (2,0.67);
+    \draw[very thick,line cap=round,line join=round] (0,0.33) -- (2,0.33);
+    \end{tikzpicture}%
+    \,%
+}
+\newcommand{\xIX}[1][{[yscale=0.2,xscale=0.1]}]{%
+    \begin{tikzpicture}#1%
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (0,2) -- (2,1.5) -- (0,1);
+    \draw[very thick,line cap=round,line join=round] (0,1) -- (2,1);
+    \draw[very thick,line cap=round,line join=round] (0,0.67) -- (2,0.67);
+    \draw[very thick,line cap=round,line join=round] (0,0.33) -- (2,0.33);
+    \draw[very thick,line cap=round,line join=round] (0,0) -- (2,0);
+    \end{tikzpicture}%
+    \,%
+}
+\let\xX\rB%
+
+
+\newcommand{\ict}[1]{\underline{\smash{#1}}}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begin{center}
+    {\Huge \textbf{Fific Runes}}
+\end{center}
+
+\section*{Monograph Letters}
+
+\begin{center}
+\rA\rB\rD\rDH\rE\rF\rG\rH\rI\rJ\rK\rL\rM\rN\rNG\rO\rP\rR\rS\rT\rTH\rU\rW\rY\rZ
+\end{center}
+
+\begin{tabu}{ccll}
+\rA & (A) & is said as in `c\ict{a}t', `p\ict{a}th', `f\ict{a}ther'. & /æ/ \textasciitilde{} /ɑ/. \\
+\rB & (B) & is said as in `we\ict{b}'. & /b/. \\
+\rD & (D) & is said as in `\ict{d}a\ict{dd}y'. & /d/. \\
+\rDH & (DH) & is said as in `\ict{th}is', `fa\ict{th}er'. & /ð/. \\
+\rE & (E) & is said as in `b\ict{e}d'. & /ɛ/ \textasciitilde{} /e/. \\
+\rF & (F) & is said as in `\ict{f}ool', `enou\ict{gh}', `\ict{ph}oto'. & /f/. \\
+\rG & (G) & is said as in `\ict{g}o'. & /ɡ/. \\
+\rH & (H) & is said as in `\ict{h}am', `lo\ict{ch}'. & /h/ \textasciitilde{} /x/ \\
+\rI & (I) & is said as in `s\ict{i}t', `s\ict{ee}'. & /i/ \textasciitilde{} /ɪ/. \\
+\rJ & (J) & is said as in `\ict{y}es'. & /j/. \\
+\rK & (K) & is said as in `\ict{k}ill', `uni\ict{que}', `\ict{c}all'. & /k/. \\
+\rL & (L) & is said as in `\ict{l}eft'. & /l/. \\
+\rM & (M) & is said as in `\ict{m}an'. & /m/. \\
+\rN & (N) & is said as in `\ict{n}o'. & /n/. \\
+\rNG & (NG) & is said as in `si\ict{ng}', `dri\ict{n}k'. & /ŋ/. \\
+\rO & (O) & is said as in `\ict{o}ff', `l\ict{a}w'. & /ɔ/ \textasciitilde{} /ɒ/. \\
+\rP & (P) & is said as in `\ict{p}en', `s\ict{p}in', `ti\ict{p}'. & /p/. \\
+\rR & (R) & is said as in `\ict{r}un', `ve\ict{r}y', `p\ict{r}ey'. & /r/. \\
+\rS & (S) & is said as in `\ict{s}ee', `\ict{c}ity'. & /s/. \\
+\rT & (T) & is said as in `\ict{t}wo', `s\ict{t}ing'. & /t/. \\
+\rTH & (TH) & is said as in `\ict{th}ing', `tee\ict{th}'. & /θ/. \\
+\rU & (U) & is said as in `p\ict{u}t', `h\ict{oo}d', `y\ict{ou}', `thr\ict{e}w'. & /ʊ/ \textasciitilde{} /u/. \\
+\rW & (W) & is said as in `\ict{w}e', `q\ict{u}een', `\ict{v}oice'. & /w/ \textasciitilde{} /v/. \\
+\rY & (Y) & is said as in `r\ict{u}n', `sk\ict{i}rt', `win\ict{er}'. & /ʌ/ \textasciitilde{} /ə/. \\
+\rZ & (Z) & is said as in `\ict{z}oo'. & /z/.
+\end{tabu}
+
+\bigskip
+
+
+\section*{Multigraph Letters}
+
+\begin{tabu}{ccll}
+\rS\rS & (SS) & is said as in `\ict{sh}e', `\ict{s}ure', `emo\ict{ti}on'. & /ʃ/. \\
+\rZ\rZ & (ZZ) & is said as in `\ict{g}enre', `plea\ict{su}re', `equa\ict{ti}on'. & /ʒ/. \\
+\rT\rS\rS & (TSS) & is said as in `\ict{ch}ina'. & /t͡ʃ/. \\
+\rD\rZ\rZ & (DZZ) & is said as in `\ict{j}oy', `ba\ict{dge}'. & /d͡ʒ/.
+\end{tabu}
+
+\section*{Numbers}
+
+\begin{center}
+\begin{tabu}{cccccccccc}
+\xI&\xII&\xIII&\xIV&\xV&\xVI&\xVII&\xVIII&\xIX&\xX\\
+1&2&3&4&5&6&7&8&9&10
+\end{tabu}
+\end{center}
+
+Numerals are written as shown above up to ten, for numbers ten through nineteen, they are written as $10 C$ where $C$ is a digit from one to nine. multiples of ten are written as $K 10$ where $K$ is the multiplier. These are used in place of ten to count higher digits. $100$ is written as $10 10$, multiples of 100 continue in the same pattern.
+
+
+\section*{Examples}
+
+\rM\rA\rI\quad \rN\rE\rM\quad \rI\rS\quad \rH\rL\rI\rN\quad \rF\rR\rI\rG\rJ\rA\rD\rO\rT\rI\rR
+
+\noindent MAI NEM IS HLIN FRIGJADOTIR
+
+\noindent My name is Hlín Friggjadótir.
+
+\bigskip
+
+\noindent \rB\rA\rI\quad \rDH\rY\quad \rG\rO\rD\rZ\quad \rD\rA\rM\quad \rDH\rI\rZ\quad \rT\rR\rO\rL\rZ
+
+\noindent BAI DHY GODZ DAM DHIZ TROLZ
+
+\noindent By the gods, damn these trolls
+
+\bigskip
+
+\noindent \xIII\xX\xIV
+
+\noindent 3 10 4
+
+\noindent 34
+
+\bigskip
+
+\noindent \xV\xX\xVII
+
+\noindent 5 10 7
+
+\noindent 57
+
+\bigskip
+
+\noindent \xIV\xX\xX\xVIII\xX\xVI
+
+\noindent 4 10 10 8 10 6
+
+\noindent 486
+
+\bigskip
+
+\end{document}
